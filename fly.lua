@@ -275,7 +275,7 @@ section:NewKeybind("Fly toggle", "Fly toggle?", Enum.KeyCode.E, function()
     end
 end)
 
-section:NewSlider("Fly speed", "Fly speed?", 100, 0, function(s)
+section:NewSlider("Fly speed", "Fly speed?", 1000, 0, function(s)
     flyspd = s
 end)
 
