@@ -507,9 +507,7 @@ while true do
                             else
                                 player.Character.HumanoidRootPart.CFrame = npc.HumanoidRootPart.CFrame + npc.HumanoidRootPart.CFrame.lookVector * myData:Get("DistanceFromNpc") 
                             end
-                            if player.PlayerFolder.CanAct.Value then
-                                pressKey("Mouse1")
-                            end
+                            
                             task.wait()
                         end
 
