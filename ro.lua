@@ -507,7 +507,9 @@ while true do
                             else
                                 player.Character.HumanoidRootPart.CFrame = npc.HumanoidRootPart.CFrame + npc.HumanoidRootPart.CFrame.lookVector * myData:Get("DistanceFromNpc") 
                             end
-                            
+                            if player.PlayerFolder.CanAct.Value then
+                                pressKey("Mouse1")
+                            end
                             task.wait()
                         end
 
@@ -517,10 +519,7 @@ while true do
 
                         if array.autofarm and player.Character.Humanoid.Health > 0 then
                             labels("Kills", 1)
-                            if npc.Name ~= "Eto Yoshimura" and not findobj(npc.Parent, "Gyakusatsu") and npc.Name ~= "Gyakusatsu" then  
-                                labels("text", "Collecting corpse...")
-                                collect(npc)
-                            end
+                            
                         end
                     end
                 else
