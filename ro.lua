@@ -33,11 +33,11 @@ local myData = loadstring(game:HttpGet("https://raw.githubusercontent.com/z4gs/s
         ["Koutarou Amon"] = false,
         ["Nishiki Nishio"] = false
     },
-    DistanceFromNpc = 4,
-    DistanceFromBoss = 0,
-    TeleportSpeed = 500,
-    ReputationFarm = True,
-    ReputationCashout = True,
+    DistanceFromNpc = 5,
+    DistanceFromBoss = 8,
+    TeleportSpeed = 150,
+    ReputationFarm = false,
+    ReputationCashout = false,
     AutoKickWhitelist = ""
 })
 
@@ -153,7 +153,7 @@ end
 
 tab2:AddSlider("TP Speed", function(x)
     myData:Set("TeleportSpeed", x)
-end, {min = 90, max = 500}):Set(45)
+end, {min = 90, max = 750}):Set(45)
 
 tab2:AddSlider("Distance from NPC", function(x)
     myData:Set("DistanceFromNpc", x * -1)
@@ -161,7 +161,7 @@ end, {min = 0, max = 8}):Set(65)
 
 tab2:AddSlider("Distance from Bosses", function(x)
     myData:Set("DistanceFromBoss", x * -1)
-end, {min = 0, max = 55}):Set(55)
+end, {min = 0, max = 15}):Set(55)
 
 labels.p = {label = tab3:AddLabel("Current trainer: "..player.PlayerFolder.Trainers[team.."Trainer"].Value)}
 
