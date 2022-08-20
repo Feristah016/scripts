@@ -519,7 +519,10 @@ while true do
 
                         if array.autofarm and player.Character.Humanoid.Health > 0 then
                             labels("Kills", 1)
-                            
+                            if npc.Name ~= "Eto Yoshimura" and not findobj(npc.Parent, "Gyakusatsu") and npc.Name ~= "Gyakusatsu" then  
+                                labels("text", "Collecting corpse...")
+                                collect(npc)
+                            end
                         end
                     end
                 else
